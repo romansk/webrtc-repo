@@ -31,7 +31,7 @@ Index: trunk/talk/media/webrtc/webrtcvoiceengine.cc
    options.auto_gain_control.Set(false);
  #elif defined(ANDROID)
 -  ec_mode = webrtc::kEcAecm;
-+  //ec_mode = webrtc::kEcAec;
++  ec_mode = webrtc::kEcAec;
 +	//rsk
 +	 LOG(LS_ERROR) << "WebRTCA: talk/..., conference aec";
  #endif
