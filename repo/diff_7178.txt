@@ -8,7 +8,7 @@ Index: trunk/webrtc/modules/audio_device/android/opensles_input.h
      kNumOpenSlBuffers = 2,
 -    kNum10MsToBuffer = 3,
 +	//rsk
-+    kNum10MsToBuffer = 6,
++    kNum10MsToBuffer = 10,
    };
  
    int InitSampleRate();
@@ -16,14 +16,16 @@ Index: trunk/webrtc/modules/audio_device/android/opensles_output.h
 ===================================================================
 --- trunk/webrtc/modules/audio_device/android/opensles_output.h	(revision 7178)
 +++ trunk/webrtc/modules/audio_device/android/opensles_output.h	(working copy)
-@@ -140,6 +140,7 @@
+@@ -140,7 +140,8 @@
      // there will be jitter in audio pipe line due to the acquisition of locks.
      // Note: The buffers in the OpenSL queue do not count towards the 10ms of
      // frames needed since OpenSL needs to have them ready for playout.
+-    kNum10MsToBuffer = 6,
 +	//rsk
-     kNum10MsToBuffer = 6,
++    kNum10MsToBuffer = 10,
    };
  
+   bool InitSampleRate();
 Index: trunk/talk/media/webrtc/webrtcvoiceengine.cc
 ===================================================================
 --- trunk/talk/media/webrtc/webrtcvoiceengine.cc	(revision 7178)
